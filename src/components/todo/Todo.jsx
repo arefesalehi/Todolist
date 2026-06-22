@@ -1,5 +1,5 @@
-import { IoCloseCircleSharp } from 'react-icons/io5'
-import { FaRegCheckSquare } from 'react-icons/fa'
+import { IoClose } from "react-icons/io5";
+import { FaCircleCheck } from "react-icons/fa6";
 
 const Todo = ({
   title,
@@ -19,11 +19,11 @@ const Todo = ({
       </div>
       <div className="flex items-center gap-5">
         {isCompleted && (
-          <p className="bg-green-300 p-2 rounded text-sm"> تکمیل شده </p>
+          <p className="bg-green-600 p-2 rounded text-white text-sm"> تکمیل شده </p>
         )}
         {isCheck && <p className="bg-yellow-300 p-2 rounded text-sm"> مهم </p>}
-        <FaRegCheckSquare onClick={() => completeTodo(id)} />
-        <IoCloseCircleSharp onClick={() => removeTodo(id)} />
+        <FaCircleCheck className='text-green-600' onClick={() => completeTodo(id)}  />
+        <IoClose className='text-red-600' onClick={() => removeTodo(id)} />
       </div>
     </div>
   )

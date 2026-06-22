@@ -12,7 +12,7 @@ const Btns = ({todos, addTodo, setFilter }) => {
           id="small"
           className="block bg-neutral-secondary-medium shadow-xs mb-4 px-3 py-2.5 border border-default-medium focus:border-brand rounded rounded-base focus:ring-brand w-full text-heading placeholder:text-body text-sm"
         >
-          <option defaultValue>نمایش فقط</option>
+       
           <option value="all" >همه </option>
           <option value="completed" >تکمیل شده ها</option>
           <option value="not-completed" >در انتظار انجام</option>

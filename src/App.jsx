@@ -69,11 +69,11 @@ const App = () => {
       </div>
 
       <hr />
-
+  {todos.length ?  <h1 className="my-5">تسک های موجود :</h1> : null}
       {todos.length ? (
         filteredTodos().map((todo) => (
           <>
-            <h1 className="my-5">تسک های موجود :</h1>
+           
             <Todo
               key={todo.id}
               {...todo}
@@ -88,13 +88,12 @@ const App = () => {
           تسکی وجود ندارد
         </div>
       )}
-
-      {todos.filter((todo) => todo.isCompleted === true).length
-        ? filteredTodos()
+     <h1 className="my-5 mt-40">تسک های تکمیل شده :</h1>
+      { filteredTodos()
             .filter((todo) => todo.isCompleted === true)
             .map((todo) => (
               <>
-                <h1 className="my-5 mt-40">تسک های تکمیل شده :</h1>
+            
                 <Todo
                   key={todo.id}
                   {...todo}
@@ -103,7 +102,7 @@ const App = () => {
                 />
               </>
             ))
-        : null}
+           }
     </div>
   )
 }
